@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./style.css">
+        <title>Login Page</title>
+    </head>
+    <body>
+        <form class="form-page" action="#">
+            <h1 class="form-page_h1">ورود به حساب کاربری</h1>
+            <label for="userEmail">
+                <span class="label_span">
+                    حساب کاربری :
+                </span>
+                <input 
+                    type="email" 
+                    name="userEmail" 
+                    id="userEmail" 
+                    placeholder="لطفا آدرس ایمیل را وارد کنید" 
+                    class="form-page_input" 
+                    required
+                >
+                <span class="error_message"></span>
+            </label>
+            <label for="userPass">
+                <span class="label_span">
+                    رمز حساب :
+                </span>
+                    <input 
+                        type="password" 
+                        name="userPass" 
+                        id="userPass" 
+                        class="form-page_input" 
+                        placeholder="لطفا رمز حساب کاربری را وارد کنید" 
+                        required 
+                    >
+                    <span class="error_message"></span>
+                </label>
+                <input type="submit" class="form-page_submit" value="ورود">
+            </form>
+            
+            <script>
+            const person = {
+                userEmail : document.getElementById("userEmail"),
+                userPass : document.getElementById("userPass"),
+            }
+
+            const errorBox = document.getElementsByClassName("error_message");
+
+            function validateEmail(value) {
+                const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if(!emailPattern.test(value)) {
+                    errorBox[0].innerHTML = "لطفا یک آدرس ایمیل معتبر وارد کنید.";
+                    return false;
+                }
+                else {
+                    errorBox[0].innerHTML = "ایمیل معتبر است.";
+                    return true;
+                }
+            }
+
+            person.userEmail.addEventListener("blur",(event) => {validateEmail(event.target.value)})
+        </script>
+    </body>
+</html>

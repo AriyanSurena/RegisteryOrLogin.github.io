@@ -1,0 +1,93 @@
+<!DOCTYPE html>  
+<html lang="fa" dir="rtl">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./style.css">  
+    <title>صفحه ثبت نام</title>  
+</head>  
+<body>  
+    <form id="form" class="form-page">  
+        <h1 id="registery_Page-title" class="form-page_h1">فرم ثبت نام</h1>  
+        
+        <label for="userFirstname">  
+            <span class="label_span">نام :</span>  
+            <input   
+                type="text"   
+                name="userFirstname"   
+                id="userFirstname"   
+                class="form-page_input"   
+                placeholder="لطفا نام را وارد کنید"   
+                required>  
+            <span class="error_message"></span>  
+        </label>  
+        
+        <label for="userLastname">  
+            <span class="label_span">نام خانوادگی :</span>  
+            <input   
+                type="text"   
+                name="userLastname"   
+                id="userLastname"   
+                class="form-page_input"   
+                placeholder="لطفا نام خانوادگی را وارد کنید"  
+                required>  
+            <span class="error_message"></span>  
+        </label>  
+        
+        <label for="userEmail">  
+            <span class="label_span">حساب کاربری :</span>  
+            <input   
+                type="email"   
+                name="userEmail"   
+                id="userEmail"   
+                class="form-page_input form-page_input--left"   
+                placeholder="لطفا آدرس ایمیل را وارد کنید"
+                required>  
+            <span class="error_message"></span>  
+        </label>  
+        
+        <label for="userPassword">  
+            <span class="label_span">رمز حساب :</span>  
+            <input   
+                type="password"   
+                name="userPassword"   
+                id="userPassword"   
+                class="form-page_input form-page_input--left"   
+                placeholder="لطفا رمز حساب کاربری را وارد کنید"   
+                required>  
+            <span class="error_message"></span>  
+        </label>  
+        
+        <label for="userPassConfirm">  
+            <span class="label_span">تکرار پسورد :</span>  
+            <input   
+                type="password"   
+                name="userPassConfirm"   
+                id="userPassConfirm"   
+                class="form-page_input form-page_input--left"   
+                placeholder="رمز حساب کاربری را دوباره وارد کنید"  
+                required>  
+            <span class="error_message"></span>  
+        </label>  
+        
+        <label for="checkbox-rules" class="checkbox-rules-style">  
+            <input  
+                type="checkbox"   
+                name="checkbox-rules"   
+                id="checkbox-rules"   
+                class="checkbox-rules-style"   
+                required>   
+            <span class="checkmark label_span"></span>  
+            <p class="rule-title">قوانین را قبول دارم.</p>  
+        </label>  
+        
+        <input   
+            type="submit"   
+            id="submit"   
+            class="form-page_submit"   
+            value="ثبت نام">  
+    </form>  
+
+    <script src="registery.js"></script>  
+</body>  
+</html>

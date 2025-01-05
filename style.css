@@ -1,0 +1,209 @@
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/Vazir-Bold.eot),
+    url(./fonts/Vazir-Bold.ttf),
+    url(./fonts/Vazir-Bold.woff),
+    url(./fonts/Vazir-Bold.woff2);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: vazir;
+}
+
+.form-page {
+    min-width: 250px;
+    max-width: 800px;
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: right;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-page_h1 {
+    font-family: vazir;
+    color: black;
+    user-select: none;
+}
+
+.container_btn--publick {
+    color: white;
+    width: 100%;
+    max-width: 800px;
+    padding: 1rem;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: lightseagreen;
+    border: none;
+    border-radius: 10px;
+    font-family: vazir;
+    user-select: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.container_btn--registery {
+    background-color: #00862aaf;
+    opacity: 0.9;
+}
+
+.container_btn--login {
+    background-color: #000081b1;
+    opacity: 0.9;
+}
+
+.container_btn--registery:hover 
+{
+    background-color: #008129;
+}
+
+.container_btn--login:hover 
+{
+    background-color: #000081;
+}
+
+.form-page_input {
+    display: block;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 0.5rem;
+    outline: none;
+    transition: all 0.5s;
+}
+
+.form-page_input:hover {
+    border-color:aqua;
+}
+
+.form-page_input:focus {
+    border-color:aqua;
+    background-color: rgba(0, 255, 255, 0.1);
+}
+
+::placeholder {
+    text-align: right;
+    color: gray;
+    user-select: none;
+}
+
+.form-page_input--left {
+    text-align: left;
+}
+
+.label_span {
+    user-select: none;
+    cursor: pointer;
+}
+
+.form-page_submit {
+    width: 100%;
+    padding: 1rem;
+    font-family: vazir;
+    background-color:aquamarine;
+    user-select: none;
+    cursor: pointer;
+    border: 1px;
+}
+
+.form-page_submit:hover {
+    background-color:rgb(0, 154, 154);
+}
+
+.form-page_submit:active {
+    background-color:rgb(38, 118, 118);
+    color: aliceblue;
+}
+
+.checkbox-rules-style {
+    display: inline;
+}
+
+.checkbox-rules-style input {
+    display: none;
+}
+
+.checkbox-rules-style .checkmark {
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    display: inline-block;
+    position: relative;
+    top: 7px;
+}
+
+.checkbox-rules-style .checkmark:hover {
+    background-color: #ccc;
+}
+
+.checkbox-rules-style input:checked ~ .checkmark{
+    background-color: blue;
+}
+
+.rule-title {
+    margin: 0%;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 0.5rem;
+    user-select: none;
+    cursor: pointer;
+}
+
+.checktick {
+    display: inline;
+}
+
+.checkmark::after {
+    content: "";
+    position: absolute;
+    top: 13%;
+    right: 7px;
+    width: 5px;
+    height: 10px;
+    border: 4px solid white;
+    border-width: 0px 5px 5px 0px;
+    transform: rotateZ(45deg);
+    border-radius: 15px;
+}
+
+a {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+span.error_message {
+    color: red;
+    text-shadow: 0px 5px 20px darkred;
+    font-size: 0.95rem;
+    border-bottom: 1px solid;
+}
+
+@media (max-width : 800px) {
+    .form-page {
+        width: 100%;
+    }
+
+    .select_title {
+        text-align: right;
+    }
+}
+
+/* حالت تاریک   */
+@media (prefers-color-scheme: dark) {  
+    body {  
+        background-color: black;  
+        color: white;  
+    }  
+    .form-page_h1 {
+        color: white;
+    }
+    ::placeholder {
+        color: gray;
+    }
+    .form-page_input:focus {
+        background-color: whitesmoke;
+    }
+}  
